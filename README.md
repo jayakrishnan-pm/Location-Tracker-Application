@@ -12,4 +12,5 @@ The service handles the following functionalities,
 </ul>
 
 Result
+
 ![track_location_device_devdeeds](https://user-images.githubusercontent.com/6814816/31053345-fa030622-a6b8-11e7-92ca-d1108a0f404a.png)
