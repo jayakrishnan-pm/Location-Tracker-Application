@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Step 1: Check & Prompt Internet connection
+     * Step 2: Check & Prompt Internet connection
      */
     private Boolean startStep2(DialogInterface dialog) {
         ConnectivityManager connectivityManager
@@ -107,7 +107,13 @@ public class MainActivity extends AppCompatActivity {
             dialog.dismiss();
         }
 
-        startStep3();
+        //Yes there is active internet connection. Next check Location is granted by user or not.
+
+        if (checkPermissions()) { //Yes permissions are granted by the user. Go to the next step.
+            startStep3();
+        } else {  //No user has not granted the permissions yet. Request now.
+            requestPermissions();
+        }
         return true;
     }
 
